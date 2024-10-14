@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(245 222 240);
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.a {
+  width: 600px;
+  height: 1400px;
+  background: linear-gradient(to bottom, #8393d1, #d8a1db);
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  animation: left 1s linear 1;
+  box-shadow: 3px 3px 20px 0px rgb(71, 71, 71);
+}
+@keyframes left {
+  0% {
+    padding-left: 100%;
+
+    left: 100%;
+  }
+  50% {
+    padding-left: 50%;
+
+    left: 30%;
+  }
+  100% {
+    padding-left: 0%;
+
+    left: 0px;
+  }
+}
+.b {
+  box-shadow: 3px 3px 20px 0px rgb(71, 71, 71);
+  z-index: 10;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  width: 600px;
+  height: 1400px;
+  background: linear-gradient(to bottom, #d8a1db, #8393d1);
+  clip-path: polygon(100% 100%, 0% 100%, 100% 0%);
+  animation: right 1s linear 1;
+}
+@keyframes right {
+  0% {
+    padding-right: 100%;
+    right: 0%;
+  }
+  50% {
+    padding-right: 50%;
+    right: 0%;
+  }
+  100% {
+    padding-right: 0%;
+
+    right: 0%;
+  }
+}
+.c {
+  box-shadow: 3px 3px 20px 0px rgb(71, 71, 71);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  z-index: 7;
+  width: 75%;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  animation: middle 1s linear;
+}
+@keyframes middle {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: -50%;
+  }
+  100% {
+    right: 0px;
+  }
+}
+.box {
+  position: relative;
+}
+.circle {
+  box-shadow: 3px 3px 20px 0px rgb(71, 71, 71);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: -50%;
+  transform: translate(100%, -10%);
+}
